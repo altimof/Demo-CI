@@ -21,4 +21,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file /home/runner/work/Demo-CI/Demo-CI/Selenide/pom.xml
+      run: mvn -B package --file /home/runner/work/Demo-CI/Selenide/pom.xml
