@@ -5,6 +5,7 @@ import static com.codeborne.selenide.Condition.*;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SeleniumTest {
 
@@ -13,6 +14,11 @@ public class SeleniumTest {
 
         System.setProperty("selenide.headless", "true");
         System.setProperty("Configuration.headless", "true");
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox"); // Bypass OS security model
 
         open("http://explorecalifornia.org/contact.htm");
         $("#name").should(appear);
