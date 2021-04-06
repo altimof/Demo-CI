@@ -11,6 +11,9 @@ public class SeleniumTest {
     @Test
     public void firstTest() {
 
+        System.setProperty("selenide.headless", "true");
+        System.setProperty("Configuration.headless", "true");
+
         open("http://explorecalifornia.org/contact.htm");
         $("#name").should(appear);
         $("#comments").should(appear);
