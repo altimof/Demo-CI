@@ -13,6 +13,7 @@ public class SeleniumTest {
     public void firstTest() {
 
         System.setProperty("selenide.headless", "true");
+        System.setProperty("selenide.proxyPort", "8080");
         System.setProperty("Configuration.headless", "true");
 
         ChromeOptions options = new ChromeOptions();
